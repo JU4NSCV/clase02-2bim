@@ -1,11 +1,11 @@
 import pandas as pd
 import os
 from sqlalchemy.orm import sessionmaker
-from modelo import get_engine, Pais, init_db
+from modelo import engine, Pais
 
 def migrar_datos():
 
-    engine = get_engine()
+
     Session = sessionmaker(bind=engine)
     session = Session()
     archivos_paises = ['../data/paises.csv', '../data/countries.csv']

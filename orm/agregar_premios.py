@@ -1,9 +1,9 @@
 import pandas as pd
 from sqlalchemy.orm import sessionmaker
-from modelo import get_engine, Premio, Serie
+from modelo import engine, Premio, Serie
 
 def migrar_datos():
-    engine = get_engine()
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
